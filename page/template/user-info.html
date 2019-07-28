@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../../assets/module/admin.css?v=312"/>
+    <style>
+        .user-info-head {
+            width: 100px;
+            height: 100px;
+            margin-top: 23px;
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid #eee;
+        }
+
+        .user-info-head:hover:after {
+            content: '\e65d';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            color: #eee;
+            background: rgba(0, 0, 0, 0.5);
+            font-family: layui-icon;
+            font-size: 24px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            cursor: pointer;
+            line-height: 100px;
+            border-radius: 50%;
+        }
+
+        .user-info-head img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .dash {
+            border-bottom: 1px dashed #ccc;
+            margin: 15px 0;
+        }
+
+        /*表单样式*/
+			.user-info-form {
+				max-width: 750px;
+			}
+			
+			.user-info-form .layui-form-item {
+				margin: 25px 0px;
+			}
+			
+			.user-info-form .layui-input-block {
+				margin-left: 130px;
+				margin-right: 15px;
+			}
+			
+			.layui-form-item .layui-input-inline p {
+				font-size: 12px;
+			}
+			
+			.layui-form-label {
+				width: 100px;
+				text-align: left;
+			}
+			
+			.layui-form-item .layui-inline {
+			     margin-bottom: 0; 
+			     margin-right: 0; 
+			    width: 49.5%;
+			}
+			
+			.layui-upload-list {
+				margin: 0;
+			}
+    </style>
+</head>
+<body>
+
+<!-- 加载动画 -->
+<div class="page-loading">
+    <div class="ball-loader">
+        <span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- 正文开始 -->
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-sm12 layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body layui-text">
+
+                    <div class="layui-tab layui-tab-brief" lay-filter="userInfoTab">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">基本信息</li>
+                            <li>修改密码</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+
+                                <div class="layui-form user-info-form">
+                                	<div class="layui-form-item">
+                                        <label class="layui-form-label">机构头像:</label>
+                                        <div class="layui-input-block">
+                                            <div class="text-center user-info-head" id="imgHead">
+					                            <img src="../../assets/img/head.png"/>
+					                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">机构名称:</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="instituteName" th:value="${institution.getInstitutionName()}"
+                                                   class="layui-input" lay-verify="required" required/>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                    	<div class="layui-inline">
+                                    		<label class="layui-form-label">所属区县:</label>
+	                                        <div class="layui-input-block">
+	                                            <input type="text" name="district" th:value="${institution.getDistrictId()}" style="min-width: 230px;"
+	                                                   class="layui-input" lay-verify="required" required/>
+	                                        </div>
+                                    	</div>
+                                        <div class="layui-inline">
+                                        	<label class="layui-form-label">所属街道:</label>
+                                        	<div class="layui-input-block">
+                                        		<input type="text" name="street" th:value="${institution.getStreetId()}"  style="min-width: 230px;"
+	                                                       class="layui-input"
+	                                                       lay-verify="required" required/>
+                                        	</div>
+	                                                
+                                        </div>
+
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">机构地址:</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="address" th:value="${institution.getAddress()}"
+                                                   class="layui-input" lay-verify="required" required/>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                    	<div class="layui-inline">
+                                    		<label class="layui-form-label">联系方式:</label>
+                                    		<div class="layui-input-block">
+                                            	<input type="text" name="phone" style="max-width: 275px;"
+                                                   class="layui-input" lay-verify="required" required/>
+                                            </div>
+                                    	</div>
+              							<div class="layui-inline">
+                                            <label class="layui-form-label">机构税号:</label>
+                                            <div class="layui-input-block">
+                                            	<input type="text" name="number" style="max-width: 275px;"
+                                                       class="layui-input" lay-verify="required" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">机构简介:</label>
+                                        <div class="layui-input-block">
+                                            <textarea name="desc" placeholder="机构简介"  th:value="${institution.getIntroduction()}"
+                                                      class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button class="layui-btn" lay-filter="userInfoSubmit" lay-submit>
+                                                保存
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="layui-tab-item">
+
+                                <div class="layui-form user-info-form">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">请输入旧密码:</label>
+                                        <div class="layui-input-block">
+                                            <input type="password" name="oldPassword" value=""
+                                                   class="layui-input" placeholder="请输入密码" lay-verify="required"
+                                                   required/>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">请输入新密码:</label>
+                                        <div class="layui-input-block">
+                                            <input type="password" name="newPassword" value="" placeholder="请输入密码"
+                                                   class="layui-input" lay-verify="required" required/>
+                                        </div>
+
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">请确认新密码:</label>
+                                        <div class="layui-input-block">
+                                            <input type="password" name="confirmPassword" value="" placeholder="请输入密码"
+                                                   class="layui-input" lay-verify="required" required/>
+                                        </div>
+
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button class="layui-btn" lay-filter="userInfoSubmit" lay-submit>
+                                                确认
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- js部分 -->
+<script type="text/javascript" src="../../assets/libs/layui/layui.js"></script>
+<script type="text/javascript" src="../../assets/js/common.js?v=312"></script>
+
+<script>
+    layui.use(['layer', 'form', 'element', 'admin'], function () {
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var form = layui.form;
+        var element = layui.element;
+        var admin = layui.admin;
+
+        // 选择头像
+        $('#imgHead').click(function () {
+            admin.cropImg({
+                onCrop: function (res) {
+                    $('#imgHead>img').attr('src', res);
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+
+</html>
