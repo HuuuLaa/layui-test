@@ -1,0 +1,52 @@
+{
+  "code": 200,
+  "msg": "ok",
+  "data": [
+    {
+      "name": "机构管理",
+      "icon": "layui-icon layui-icon-home",
+      "url": "javascript:;",
+      "subMenus": [
+        {
+          "name": "机构信息",
+          "url": "page/instituteManage/instituteInfo.html"
+        },
+        {
+          "name": "员工信息",
+          "url": "page/instituteManage/employeeInfo.html"
+        }
+      ]
+    },
+    {
+      "name": "儿童管理",
+      "icon": "layui-icon layui-icon-set",
+      "url": "javascript:;",
+      "subMenus": [
+        {
+          "name": "儿童列表",
+          "url": "page/system/childInfo.html"
+        },
+        {
+          "name": "已出园列表",
+          "url": "page/system/childOutInfo.html"
+        },
+        {
+          "name": "已审批",
+          "url": "page/system/approvedInfo.html"
+        }
+      ]
+    },{
+      "name": "重大事件上报",
+      "icon": "layui-icon layui-icon-set",
+      "url": "page/thing/thing.html",
+      "subMenus": [
+      ]
+    },{
+      "name": "监控管理",
+      "icon": "layui-icon layui-icon-set",
+      "url": "page/monitoringManage/monitoringList.html",
+      "subMenus": [
+      ]
+    }
+  ]
+}

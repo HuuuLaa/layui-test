@@ -1,0 +1,117 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 2577,
+  "data": [
+    {
+      "id": 887,
+      "eventId": 1,
+      "name": "Windows 10",
+      "device": "Windows 10",
+      "browserType": "Chrome",
+      "occurTime": "113.44.121.179",
+      "reportDate": "2019-03-04T21:59:38",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 886,
+      "eventId": 1,
+      "name": "Mac OS X",
+      "device": "Mac OS X",
+      "browserType": "Chrome",
+      "occurTime": "113.116.50.136",
+      "reportDate": "2019-03-04T21:57:13",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 885,
+      "eventId": 1,
+      "name": "Windows 10",
+      "device": "Windows 10",
+      "browserType": "Chrome",
+      "occurTime": "110.178.97.34",
+      "reportDate": "2019-03-04T21:46:23",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 884,
+      "eventId": 1,
+      "name": "Windows 8",
+      "device": "Windows 8",
+      "browserType": "Chrome",
+      "occurTime": "183.226.54.242",
+      "reportDate": "2019-03-04T21:36:21",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 883,
+      "eventId": 1,
+      "name": "Windows 7",
+      "device": "Windows 7",
+      "browserType": "Chrome",
+      "occurTime": "36.106.66.162",
+      "reportDate": "2019-03-04T20:43:49",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 882,
+      "eventId": 1,
+      "name": "Windows 10",
+      "device": "Windows 10",
+      "browserType": "Chrome",
+      "occurTime": "182.109.237.54",
+      "reportDate": "2019-03-04T20:34:00",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 881,
+      "eventId": 1,
+      "name": "Windows 7",
+      "device": "Windows 7",
+      "browserType": "Firefox",
+      "occurTime": "125.70.176.119",
+      "reportDate": "2019-03-04T18:38:15",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 880,
+      "eventId": 1,
+      "name": "Mac OS X",
+      "device": "Mac OS X",
+      "browserType": "Chrome",
+      "occurTime": "124.16.4.11",
+      "reportDate": "2019-03-04T17:51:13",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 879,
+      "eventId": 1,
+      "name": "Windows 10",
+      "device": "Windows 10",
+      "browserType": "Chrome",
+      "occurTime": "182.242.114.157",
+      "reportDate": "2019-03-04T17:42:34",
+      "username": "admin",
+      "content": "管理员"
+    },
+    {
+      "id": 878,
+      "eventId": 1,
+      "name": "Windows 7",
+      "device": "Windows 7",
+      "browserType": "Chrome",
+      "occurTime": "113.116.53.92",
+      "reportDate": "2019-03-04T17:29:42",
+      "username": "admin",
+      "content": "管理员"
+    }
+  ]
+}

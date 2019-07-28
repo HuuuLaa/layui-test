@@ -1,0 +1,59 @@
+{
+  "code": 200,
+  "msg": "ok",
+  "data": [
+    {
+      "name": "孕产妇管理",
+      "icon": "layui-icon layui-icon-home",
+      "url": "page/maternalManage/maternalInfo.html",
+      "subMenus": [
+      ]
+    },
+    {
+      "name": "儿童管理",
+      "icon": "layui-icon layui-icon-set",
+      "url": "javascript:;",
+      "subMenus": [
+        {
+          "name": "儿童列表",
+          "url": "page/system/childInfo.html"
+        },
+        {
+          "name": "已出园列表",
+          "url": "page/随访任务/taskInfo.html"
+        }
+      ]
+    },{
+      "name": "线上课程",
+      "icon": "layui-icon layui-icon-set",
+      "url": "javascript:;",
+      "subMenus": [
+      	{
+          "name": "文章列表",
+          "url": "page/onlineCourse/articalList.html"
+        },{
+          "name": "视频列表",
+          "url": "page/onlineCourse/videoList.html"
+        }
+      ]
+    },{
+      "name": "线下活动",
+      "icon": "layui-icon layui-icon-set",
+      "url": "page/offlineActi/offlineActiList.html",
+      "subMenus": [
+      ]
+    },{
+      "name": "通知公告",
+      "icon": "layui-icon layui-icon-set",
+      "url": "page/notice/noticeList.html",
+      "subMenus": [
+      ]
+    },{
+      "name": "统计报表",
+      "icon": "layui-icon layui-icon-set",
+      "url": "page/form/form.html",
+      "subMenus": [
+      ]
+    }
+  ]
+}
